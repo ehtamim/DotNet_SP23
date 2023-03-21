@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "NgoDashboard";
+    Layout = "~/Views/Shared/NgoLayout.cshtml";
+}
+
+<h2>NgoDashboard</h2>
+
+<table border="2">
+    <tr>
+
+        <th>Id</th>
+        <th>Resturant ID</th>
+        <th>Description</th>
+        <th>Preserve Date</th>
+        <th>Request Date</th>
+        <th>Status</th>
+        <th>Action Date</th>
+        <th>Delivery Date</th>
+        <th>Select Employee</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var d in Model)
+    {
+        <form name="myForm" method="post">
+        <tr>
+            <td>@d.Id</td>
+            <td>@d.ResturantId</td>
+            <td>@d.Description</td>
+            <td>@d.PreserveDate</td>
+            <td>@d.Request_Date</td>
+            <td>@d.Status</td>
+            <td>@d.Action_Date</td>
+            <td>@d.Delivery_Date</td>
+            <td><input name="EmployeeId" type="number" placeholder="Enter employee id"/></td>
+            <input type="hidden" name="FoodRequestId" value="@d.Id"/>
+            <td><input type="submit" value="UPDATE"/></td>
+        </tr>
+        </form>
+    }
+</table>

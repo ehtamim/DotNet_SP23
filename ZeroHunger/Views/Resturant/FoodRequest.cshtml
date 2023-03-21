@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "FoodRequest";
+    Layout = "~/Views/Shared/ResturantLayout.cshtml";
+}
+
+<h2>FoodRequest</h2>
+<form name="myForm" action="" onsubmit="" method="post">
+    Enter Last Preservation Date: <input type="date" name="PreserveDate" /><br />
+    Description: <textarea name="Description" rows="4" cols="50"></textarea><br />
+    <input type="hidden" name="Status" value="1" />
+    <input type="hidden" name="ResturantId" value="@Session["id"]" />
+    <input name="submit" type="submit" value="REQUEST DONATION">
+</form>

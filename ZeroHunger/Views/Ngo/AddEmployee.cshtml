@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "AddEmployee";
+    Layout = "~/Views/Shared/NgoLayout.cshtml";
+}
+
+<h2>AddEmployee</h2>
+
+<form name="myForm" action="" onsubmit="" method="post">
+    <input type="text" name="name" class="form-control" placeholder="Enter your name"> <br> <br>
+    <input type="text" name="email" class="form-control" placeholder="Enter your email"> <br> <br>
+    <input type="text" name="PhoneNumber" class="form-control" placeholder="Enter your contact"> <br> <br>
+    <input type="password" name="password" class="form-control" placeholder="Enter your password"> <br> <br>
+    <input type="hidden" name="NgoId" value="@Session["id"]"/>
+    <input name="submit" type="submit" value="ADD EMPLOYEE">
+</form>

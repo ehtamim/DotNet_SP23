@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AllEmployees";
+    Layout = "~/Views/Shared/NgoLayout.cshtml";
+}
+
+<h2>AllEmployees</h2>
+
+<table border="2">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Email</td>
+            <td>@emp.PhoneNumber</td>
+        </tr>
+    }
+</table>
